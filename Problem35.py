@@ -1,27 +1,6 @@
 #33491st
 from math import floor, sqrt,log
-
-def getPrimes(limit):
-	if limit < 2:
-		return []
-
-	odd = [i for i in range(3, limit, 2)]
-	primeMap = {i: True for i in odd}
-	
-	primeList = [2]
-	stop = floor(sqrt(max(odd)))
-	for i in odd:
-		key = i**2
-		while key < limit:
-			primeMap[key] = False
-			key += (i*2)
-		if i > stop:
-			break
-
-	for key in primeMap:
-		if primeMap[key]:
-			primeList.append(key)
-	return primeList
+import primes
 
 def rotate(n):
 	powTen = int(10**(floor(log(n, 10))))
@@ -33,7 +12,6 @@ def rotate(n):
 		rotations.append(init)
 
 	return rotations
-
 
 def getCircularPrimes(primeList):
 	circularPrimes = [2, 5,]
@@ -47,6 +25,5 @@ def getCircularPrimes(primeList):
 	return circularPrimes
 
 if __name__ == '__main__':
-	circularPrimes = getCircularPrimes(getPrimes(1000000))
-	print set(circularPrimes)
+	circularPrimes = getCircularPrimes(primes.getPrimes(1000000))
 	print len(set(circularPrimes))
