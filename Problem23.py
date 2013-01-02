@@ -1,11 +1,11 @@
-from math import floor, sqrt
+import math
 
 sum_map = {i:1 for i in range(2,28124)}
 
 for i in range(2,28124):
 	j = i
 	while j < 28124:
-		temp = int(floor(sqrt(j)))
+		temp = int(math.floor(math.sqrt(j)))
 		if i <= temp:
 			sum_map[j] += i
 			if j/i != i:

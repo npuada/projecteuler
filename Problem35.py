@@ -1,9 +1,9 @@
 #33491st
-from math import floor, sqrt,log
+import math
 import primes
 
 def rotate(n):
-	powTen = int(10**(floor(log(n, 10))))
+	powTen = int(10**(math.floor(math.log(n, 10))))
 	rotations = []
 	init = (n%powTen*10 + n/powTen)
 	rotations.append(init)
