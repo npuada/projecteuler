@@ -1,7 +1,7 @@
 #32461st
-import primes
+import tools
 
-prime_list = primes.getPrimes(100000)
+prime_list = tools.getPrimes(100000)
 
 def isPrime(x):
 	index = 0

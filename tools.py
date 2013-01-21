@@ -21,3 +21,18 @@ def getPrimes(limit):
 		if primeMap[key]:
 			primeList.append(key)
 	return primeList
+
+def gcd(a,b):
+	if a == 0 or b == 0:
+		return abs(a-b)
+
+	while a != 0 and b != 0:
+		if a > b:
+			a %= b
+		elif b >= a:
+			b %= a
+
+	if a > b:
+		return a
+	else:
+		return b

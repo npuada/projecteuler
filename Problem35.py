@@ -1,6 +1,6 @@
 #33491st
 import math
-import primes
+import tools
 
 def rotate(n):
 	powTen = int(10**(math.floor(math.log(n, 10))))
@@ -25,5 +25,5 @@ def getCircularPrimes(primeList):
 	return circularPrimes
 
 if __name__ == '__main__':
-	circularPrimes = getCircularPrimes(primes.getPrimes(1000000))
+	circularPrimes = getCircularPrimes(tools.getPrimes(1000000))
 	print len(set(circularPrimes))
