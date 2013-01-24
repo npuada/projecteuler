@@ -1,3 +1,4 @@
+#31017th
 import io
 import re
 
@@ -9,7 +10,7 @@ def get_score(str):
 
 def get_triangle_words(lst):
 	triangle_words = []
-	triangle_list = [(i*(i+1))/2 for i in range(1,10)]
+	triangle_list = [(i*(i+1))/2 for i in range(1,25)]
 
 	for word in lst:
 		if get_score(word) in triangle_list:
@@ -21,5 +22,6 @@ if __name__ == '__main__':
 	f = io.open('words.txt', 'r')
 	content = f.read()
 	word_list = re.findall(r'\w+', content)
+	max = 0
 	triangle_words = get_triangle_words(word_list)
 	print len(triangle_words)
