@@ -4,12 +4,12 @@ def getPrimes(limit):
 	if limit < 2:
 		return []
 
-	odd = [i for i in range(3, limit, 2)]
-	primeMap = {i: True for i in odd}
+	#odd = [i for i in xrange(3, limit, 2)]
+	primeMap = {i: True for i in xrange(3, limit, 2)}
 	
 	primeList = [2]
-	stop = math.floor(math.sqrt(max(odd)))
-	for i in odd:
+	stop = math.floor(math.sqrt(limit))
+	for i in xrange(3, limit, 2):
 		key = i**2
 		while key < limit:
 			primeMap[key] = False
