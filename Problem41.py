@@ -1,7 +1,7 @@
 import itertools
-import tools
+import tools3
 
-primes = tools.getPrimes(2766)
+primes = tools3.getPrimes(2766)
 primes.reverse()
 
 if __name__ == '__main__':
